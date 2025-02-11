@@ -4,12 +4,12 @@ let password = prompt("Enter your password");
 let correctUsername = "admin";
 let correctPassword = "123321";
 
-if (username === correctUsername && password === correctPassword) {
+if (!username || !password) {
+  alert("Validation Error");
+} else if (username === correctUsername && password === correctPassword) {
   alert(`Hello ${username}`);
 } else if (username !== correctUsername) {
   alert("Incorrect username");
-} else if (password !== correctPassword) {
-  alert("Incorrect password");
 } else {
-  alert("Validation error");
+  alert("Incorrect password");
 }
